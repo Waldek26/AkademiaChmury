@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formularz rejestracji</title>
+    <style>
+        h1{
+            margin-bottom: 0;
+        }
+        .form-frame{
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+        }
+        .form-frame label{
+            margin-top: 10px;
+        }
+
+        .form-frame .button-submit{
+            width: 100px;
+        }
+
+        .form-frame .terms-label{
+            font-size: 15px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="form-frame">
+        <h1>Sign up</h1>
+        <label>Name</label>
+        <select>
+            <option value="" selected disabled hidden>full name</option>
+        </select>
+        <label>email</label>
+        <input type="text" placeholder="gmail id">
+        <label>Password</label>
+        <input type="password" placeholder="8 characters">
+        <label>Date Of Birth</label>
+        <input type="date" placeholder="gmail id">
+        <label>Gender</label>
+        <div class="gender-box">
+            <label>
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other"> Other
+            </label>
+        </div>
+        <label>Insert your photo</label>
+        <input type="file" accept="image/png, image/jpeg">
+        <label>Insert your resume</label>
+        <input type="file" id="docpicker" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+        <label for="w3review">Security Question</label>
+        <select>
+            <option value="" selected disabled hidden>select</option>
+        </select>
+        <textarea rows="4" cols="50"></textarea>
+
+        <label class="terms-label">
+            <input type="checkbox"> I agree terms and conditions
+        </label>
+        <button class="button-submit" type="submit">Register</button>
+    </div>
+</body>
+</html>
