@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+}
+
+.grid-item {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.container {
+  border: 1px solid black;
+  display: grid;
+  /* grid-template-columns: repeat(3, 200px); */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  /* grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-template-rows: 50px 75px 100px; */
+  grid-template: 100px 100px 100px / repeat(3, minmax(200px, 1fr));
+  margin-bottom: 10px;
+  /* gap: 3px 1px; */
+  /* justify-items: center;
+  align-items: center; */
+  place-items: center center;
+}
+
+.container .grid-item {
+  border: 1px dotted blue;
+}
+
+.container1 {
+  border: 1px solid black;
+  display: grid;
+  height: 600px;
+  grid-template: repeat(3, 100px) / repeat(3, 100px);
+  /* justify-content: space-evenly;
+  align-content: space-around; */
+  place-content: space-around space-evenly;
+  margin-bottom: 10px;
+}
+
+.container2 {
+  border: 1px solid black;
+  display: grid;
+  grid-template: repeat(3, 100px) / repeat(3, 100px);
+}
+
+.container3 {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  margin-bottom: 10px;
+}
+
+.container3 .grid-item {
+  display: flex;
+  place-content: center center;
+}
+
+.container4 {
+  width: 600px;
+  height: 600px;
+  margin: 0;
+
+  border: 1px solid black;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.container4 .grid-item {
+  width: 200px;
+  height: 200px;
+  display: flex;
+}
+
+.container4 .grid-item:nth-of-type(1) {
+  background-color: red;
+  grid-row: 1/1;
+  grid-column: 1/2;
+}
+
+.container4 .grid-item:nth-of-type(2) {
+  background-color: yellow;
+  grid-row: 1/2;
+  grid-column: 2/3;
+  /* z-index: 99; */
+  /* transform: translate(-50px, 50px); */
+  position: relative;
+  left: -50px;
+  bottom: -50px;
+}
+
+.container4 .grid-item:nth-of-type(3) {
+  background-color: green;
+  grid-row: 1/3;
+  grid-column: 1/3;
+  place-self: center center;
+}
+
+.container3 .grid-item img {
+  min-width: 400px;
+}
+
+.item-1 {
+  background-color: #b4bf35;
+}
+
+.item-2 {
+  background-color: #b95f21;
+}
+
+.item-3 {
+  background-color: #1c4c56;
+}
+
+.item-4 {
+  background-color: #cfb276;
+}
+
+.item-5 {
+  background-color: #6b0803;
+}
+
+.item-6 {
+  background-color: #cfa246;
+}
+
+.item-7 {
+  background-color: #b95f21;
+}
+
+.item-8 {
+  background-color: #01243a;
+}
+
+.item-9 {
+  background-color: #aad041;
+}
