@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Javascript addEventListener</h2>
+    <button id="btnAdd">Attach event</button>
+    <button id="myBtn">Try it</button>
+    <button id="btnRmv">Remoove event</button>
+    <script>
+      document.getElementById("btnAdd").addEventListener("click", () => {
+        document
+          .getElementById("myBtn")
+          .addEventListener("click", processClick);
+      });
+
+      document.getElementById("btnRmv").addEventListener("click", () => {
+        document
+          .getElementById("myBtn")
+          .removeEventListener("click", processClick);
+      });
+
+      function processClick() {
+        alert("hello!");
+      }
+    </script>
+  </body>
+</html>
