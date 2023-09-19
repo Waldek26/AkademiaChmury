@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>JavaScript window</h2>
+    <button type="button" id="btnWindowSize">Window size</button><br /><br />
+    <button type="button" id="btnAvailableWindowSize">
+      Available window size</button
+    ><br /><br />
+    <button type="button" id="btnColorDepth">Color depth</button><br /><br />
+    <script>
+      document.getElementById("btnWindowSize").addEventListener("click", () => {
+        alert(
+          "height: " +
+            window.innerHeight.toString() +
+            " px; width: " +
+            window.innerWidth.toString() +
+            " px"
+        );
+      });
+
+      document
+        .getElementById("btnAvailableWindowSize")
+        .addEventListener("click", () => {
+          alert(
+            "height: " +
+              screen.availHeight.toString() +
+              " px; width: " +
+              screen.availWidth.toString() +
+              " px"
+          );
+        });
+
+      document.getElementById("btnColorDepth").addEventListener("click", () => {
+        alert(
+          "Color depth: " +
+            screen.colorDepth.toString() +
+            "; pixel depth: " +
+            screen.pixelDepth.toString()
+        );
+      });
+
+      //window.location.href
+      //window.history.back
+      //window.navigator.cookieEnabled
+      //navigator.appName
+      //navigator.appCodeName
+      //navigator.appVersion;
+      //navigator.userAgent;
+      //navigator.platform;
+      //navigator.language
+      //navigator.onLine
+    </script>
+  </body>
+</html>

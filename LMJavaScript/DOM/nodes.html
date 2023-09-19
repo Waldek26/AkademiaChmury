@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1">
+      <p id="p1">Paragraph 1</p>
+      <p id="p2">Paragraph second</p>
+    </div>
+    <button type="button" onclick="btnClick()">Create node</button><br /><br />
+    <button type="button" id="btnRemoove">Remoove node</button><br /><br />
+    <button type="button" id="btnChildnodesCount">Count node</button
+    ><br /><br />
+    <script>
+      var counter = 0;
+      function btnClick() {
+        const para = document.createElement("p");
+        const node = document.createTextNode(
+          "This is new text node " + counter.toString()
+        );
+        counter++;
+        para.appendChild(node);
+        const element = document.getElementById("div1");
+        const child = element.childNodes[1];
+        element.insertBefore(para, child);
+
+        //element.appendChild(para);
+
+        document.getElementById("btnRemoove").addEventListener("click", () => {
+          const element = document.getElementById("div1");
+          var ćhild = element.childNodes[1];
+          element.removeChild(ćhild);
+
+          //element.replaceChild(para, ćhild);
+          //element.childNodes[1].remove();
+        });
+
+        document
+          .getElementById("btnChildnodesCount")
+          .addEventListener("click", () => {
+            const element = document.getElementById("div1");
+
+            // this is not array!
+            var peNodes = element.querySelectorAll("p");
+            alert(peNodes.length);
+          });
+      }
+    </script>
+  </body>
+</html>
