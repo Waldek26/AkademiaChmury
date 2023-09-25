@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"-->
+    <script src="./lib/jquery-3.7.1.min.js"></script>
+    <style>
+      .main-frame {
+        display: inline-flex;
+        flex-direction: column;
+      }
+      .main-frame button {
+        margin-bottom: 10px;
+      }
+    </style>
+
+    <script>
+      $(document).ready(function () {
+        $("#btnHide").click(function () {
+          $("p").hide();
+          alert("P is hidding");
+        });
+
+        $("#btnShowTxt").click(function () {
+          $("#pe1").text("New text!");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="main-frame">
+      <h2>JQuery</h2>
+      <p id="pe1">Paragraph 1</p>
+      <p>Paragraph 2</p>
+      <button id="btnHide" type="button">Hide P</button>
+      <button id="btnShowTxt" type="button">Show txt</button>
+    </div>
+  </body>
+</html>

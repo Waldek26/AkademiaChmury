@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .form-frame form {
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+      }
+      .form-frame label {
+        margin-top: 10px;
+      }
+
+      .form-frame .button-submit {
+        width: 100px;
+        margin-top: 20px;
+        height: 30px;
+      }
+    </style>
+    <script>
+      function ValidateForm() {
+        rep = true;
+        var x = document.forms["frm1"]["fname"].value;
+        if (x == "") {
+          alert("Name must be filled out");
+          rep = false;
+        }
+        var n = document.forms["frm1"]["number"].value;
+        if (n == "" || isNaN(n) || n < 0 || n > 10) {
+          alert("Wrong number");
+          rep = false;
+        }
+
+        if (rep == true) {
+          alert("form is valid");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="form-frame">
+      <h2>Form validation</h2>
+      <form name="frm1" action="" onsubmit="return ValidateForm()">
+        <label for="fname">Name:</label>
+        <input type="text" name="fname" />
+        <label for="number">10>Number>0:</label>
+        <input type="text" name="number" />
+        <button class="button-submit" type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

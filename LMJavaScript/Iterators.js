@@ -1,3 +1,15 @@
+function ArrayManipulation() {
+  const numbers = [15, 25, 30, 40];
+  // dodaje element na końcu
+  numbers.push(3);
+
+  // dodaje element na początku
+  numbers.unshift(2);
+
+  let last = numbers.pop();
+  let first = numbers.shift();
+}
+
 function ItForeach() {
   var numbers = [15, 25, 30, 40];
   numbers.forEach(function (value, index) {

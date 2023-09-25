@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #div1 {
+        display: inline-flex;
+        flex-direction: column;
+        border: 1px dotted red;
+        padding: 2px;
+      }
+
+      #div1 p {
+        margin: 0;
+        padding: 10px;
+        border: 1px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1"></div>
+
+    <script>
+      function AddPElement(key, value) {
+        const para = document.createElement("p");
+        const node = document.createTextNode(key + " " + value);
+        para.appendChild(node);
+        const element = document.getElementById("div1");
+        element.append(para);
+      }
+
+      var jsonTexrt =
+        '{"employees":[' +
+        '{"firstname":"John","lastname":"Doe"},' +
+        '{"firstname":"Anna","lastname":"Panna"},' +
+        '{"firstname":"Lola","lastname":"Cola"}]}';
+
+      const obj = JSON.parse(jsonTexrt);
+
+      var employees = obj.employees;
+
+      employees.forEach((key, index) => {
+        AddPElement(key.firstname, key.lastname);
+      });
+
+      var counter = 0;
+      for (var index in employees) {
+        AddPElement(index, employees[index].firstname);
+        counter++;
+      }
+
+      Object.keys(employees).forEach((key) => {
+        AddPElement(key, employees[key]);
+      });
+
+      counter = 0;
+      for (var key in employees) {
+        AddPElement(counter, employees[key]);
+        counter++;
+      }
+    </script>
+  </body>
+</html>
