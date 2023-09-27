@@ -66,3 +66,15 @@ function ItFind() {
 
   console.log(found);
 }
+
+function forArray() {
+  // Setup
+  const myArr = [2, 3, 4, 5, 6];
+
+  // Only change code below this line
+  let total = 0;
+  for (const elem of myArr) {
+    total += elem;
+  }
+  console.log(total);
+}
