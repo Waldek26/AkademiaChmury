@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <title>Dodaj nową organizację</title>
+    <link rel="stylesheet" href="./Form2_css.css" />
+  </head>
+  <body>
+    <div class="form-frame">
+      <form name="newOrgFrm" onsubmit="return ValidateForm()">
+        <h2>Dodaj nową organizację</h2>
+        <label for="txtNIP">NIP</label>
+        <div class="nipFields" id="nipFields">
+          <input type="text" name="txtNip" id="txtNip" />
+          <a href="" id="gusLink">Pobierz dane z GUS</a>
+        </div>
+        <label for="txtNazwa">Nazwa</label>
+        <input type="text" name="txtNazwa" id="txtNazwa" />
+        <label for="txtAdres">Ulica, numer domu / lokalu</label>
+        <input type="text" name="txtAdres" id="txtAdres" />
+        <div class="miejscowoscFields" id="miejscowoscFields">
+          <div class="kodFields">
+            <label for="txtKod">Kod pocztowy</label>
+            <input type="text" name="txtKod" id="txtKod" />
+          </div>
+          <div>
+            <label for="txtMiejscowosc">Miejscowość</label>
+            <input type="text" name="txtMiejscowosc" id="txtMiejscowosc" />
+          </div>
+        </div>
+        <label for="kbxKraj">Kraj</label>
+        <select name="kbxKraj" id="kbxKraj">
+          <option value="1">Polska</option>
+        </select>
+        <img class="select-arrow" src="/Form_end2/img/arrow.JPG" width="10px" />
+        <label for="txtImie">Imię</label>
+        <input type="text" name="txtImie" id="txtImie" />
+        <label for="txtNazwisko">Nazwisko</label>
+        <input type="text" name="txtNazwisko" id="txtNazwisko" />
+        <label for="txtTelefon">Telefon kontaktowy</label>
+        <input type="tel" name="txtTelefon" id="txtTelefon" />
+        <div class="buttonFields">
+          <button type="submit" name="btnSubmit" id="btnSubmit">Zapisz</button>
+          <button type="reset" name="btnAnuluj" id="btnAnuluj">Anuluj</button>
+        </div>
+      </form>
+    </div>
+    <script src="./Form2_js.js"></script>
+  </body>
+</html>
