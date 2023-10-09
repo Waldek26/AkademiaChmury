@@ -1,5 +1,11 @@
+// npm run dev
+import PostsList from "../components/PostsList";
 function App() {
-  return <h1>Hello World!</h1>;
+  return (
+    <main>
+      <PostsList />
+    </main>
+  );
 }
 
 export default App;
