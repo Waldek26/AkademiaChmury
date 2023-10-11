@@ -3,8 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NewPost from "../components/NewPost";
 import RootLayout from "../routes/RootLayout";
-
-import App from "./App";
+import Posts, { loader as postsLoader } from "../routes/Posts";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -12,8 +11,12 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     children: [
-      { path: "/", element: <App /> },
-      { path: "/create-post", element: <NewPost /> },
+      {
+        path: "/",
+        element: <Posts />,
+        loader: postsLoader,
+        children: [{ path: "/create-post", element: <NewPost /> }],
+      },
     ],
   },
 ]);
