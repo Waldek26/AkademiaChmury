@@ -1,42 +1,38 @@
 import Post from "../components/Post";
 import classes from "./PostsList.module.css";
 //import { useState, useEffect } from "react";
-import {useLoaderData} from "react-router-dom"
+import { useLoaderData } from "react-router-dom";
 
 function PostsList() {
   const posts = useLoaderData();
-  // const [isFetching, setIsFetching] = useState(false);
 
+  // funkcjonalność przeniesiona do louder-a
+  // const [isFetching, setIsFetching] = useState(false);
   // useEffect(() => {
   //   async function fetchPosts() {
   //     setIsFetching(true);
-
   //     setPosts(resData.posts);
   //     setIsFetching(false);
   //   }
-
   //   fetchPosts();
   // }, []);
 
-  function addPostHandler(postData) {
-    fetch("http://localhost:8080/posts", {
-      method: "POST",
-      body: JSON.stringify(postData),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-
-    //setPosts([postData, ...posts]);
-    setPosts((existingPosts) => [postData, ...existingPosts]);
-  }
+  // function addPostHandler(postData) {
+  //   //setPosts([postData, ...posts]);
+  //   setPosts((existingPosts) => [postData, ...existingPosts]);
+  // }
 
   return (
     <>
       {posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((post) => (
-            <Post key={post.body} author={post.author} body={post.body} />
+            <Post
+              key={post.id}
+              id={post.id}
+              author={post.author}
+              body={post.body}
+            />
           ))}
         </ul>
       )}

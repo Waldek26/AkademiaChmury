@@ -1,15 +1,14 @@
+import { Link } from "react-router-dom";
 import classes from "./Post.module.css";
 
-function Post(props) {
+function Post({ id, author, body }) {
   //const chosenName = Math.random() > 0.5 ? names[0] : names[1];
-  props.author;
-  props.body;
   return (
-    <li>
-      <div className={classes.post}>
-        <p className={classes.author}>{props.author}</p>
-        <p className={classes.text}>{props.body}</p>
-      </div>
+    <li className={classes.post}>
+      <Link to={id}>
+        <p className={classes.author}>{author}</p>
+        <p className={classes.text}>{body}</p>
+      </Link>
     </li>
   );
 }
