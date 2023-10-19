@@ -1,0 +1,2 @@
+cd C:\tmp\AkademiaChmury\TypeScript\cl-interfaces-01-starting-setup
+tsc -w
