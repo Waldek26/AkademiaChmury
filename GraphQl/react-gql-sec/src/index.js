@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 //import App from "./App";
-import DogsApp from "./components/DogsApp";
+//import DogsApp from "./components/DogsApp";
+import DisplayLocationsApp from "./components/DisplayLocationsApp";
 import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<DogsApp />);
+root.render(<DisplayLocationsApp />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
