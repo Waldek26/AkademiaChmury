@@ -1,0 +1,22 @@
+{
+  "name": "queries-example-app-server",
+  "description": "Server for the Apollo Client \"Queries\" docs example app.",
+  "dependencies": {
+    "apollo-datasource-rest": "latest",
+    "apollo-server": "^2.26.2",
+    "graphql": "14.0.2",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.7.0",
+    "shorthash": "0.0.2"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js localhost 4000"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/graphql": "14.0.1",
+    "nodemon": "^3.0.1"
+  }
+}
