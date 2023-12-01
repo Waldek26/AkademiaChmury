@@ -1,0 +1,12 @@
+.userPlate {
+  display: inline-block;
+  border: 1px solid red;
+  background-color: aquamarine;
+  margin-bottom: 20px;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+}
+
+.sheetElement {
+  font-weight: bold;
+}
