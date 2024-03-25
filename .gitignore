@@ -1,6 +1,5 @@
 React/dummy-backend/node_modules/
 test-main-frame/node_modules/
-test-main-frame/node_modules/
 simple-chrome-extension_bed/.eslintrc.cjs
 simple-chrome-extension_bed/.gitignore
 simple-chrome-extension_bed/.prettierrc.json
@@ -25,3 +24,4 @@ ExtLook/index.css
 ExtLook/index.html
 ExtLook/logo.svg
 ChromeExtensionOne/LocalReadMe.txt
+tailwind/ninjafood/node_modules/
